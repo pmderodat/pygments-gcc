@@ -26,6 +26,7 @@ class GCCLexer(RegexLexer):
             (r'([-_.a-zA-Z0-9]+)(:)([0-9]+)(:)([0-9]+)',
                 bygroups(String, Punctuation, Number.Integer, Punctuation,
                     Number.Integer)),
+            (r'/[^ ]+', String),
             (r'"[^"]*"', String),
             (r'0x[0-9a-f]+', Number.Hex),
             (r'-?[0-9]+', Number.Integer),
